@@ -1,3 +1,5 @@
+[![Downloads](https://img.shields.io/github/downloads/Bry1k/PMB/total.svg)](https://github.com/Bry1k/PMB/releases)
+
 # **About**
 A batch script I created that benchmarks applications using [PresentMon](https://github.com/GameTechDev/PresentMon/tree/main). It's a simple way to benchmark your games with no hassle at all. 
 
