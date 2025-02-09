@@ -1,5 +1,5 @@
 # **About**
-A batch script I created that benchmarks applications using [PresentMon](https://github.com/GameTechDev/PresentMon/tree/main). 
+A batch script I created that benchmarks applications using [PresentMon](https://github.com/GameTechDev/PresentMon/tree/main). It's a simple way to benchmark your games with no hassle at all. 
 
 # **How to Use?**
 - Download the latest [release](https://github.com/Bry1k/PMB/releases/tag/0.1)
