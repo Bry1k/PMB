@@ -15,6 +15,7 @@ for /f "delims=" %%i in ('powershell -command "[System.Reflection.Assembly]::Loa
 cls
 set /p "dtime=Enter Capture Delay (sec): "
 set /p "ctime=Enter Capture Time (sec): "
+echo Selected Game: %filename%
 echo %dtime% seconds - Capture Delay
 echo %ctime% seconds - Capture Time
 timeout /t 3 /nobreak >nul
