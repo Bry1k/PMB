@@ -3,7 +3,7 @@ cd /d "%~dp0"
 setlocal enabledelayedexpansion
 
 :: Set date and time for the output file name
-set "timestamp=%date:~-4%%date:~-7,2%%date:~-10,2%_%time:~0,2%%time:~3,2%%time:~6,2%"
+for /f "delims=" %%a in ('powershell -NoProfile -Command "Get-Date -Format yyyy-MM-dd_HH-mm"') do set date_time=%%a
 
 
 echo Select the game you want to capture
@@ -23,9 +23,9 @@ cls
 
 :: Creates Capture folder if doesnt exist
 if not exist "Captures" (
-    mkdir "Captures" && set output="captures\%timestamp%.csv"
+    mkdir "Captures" && set output="captures\%datetime%.csv"
 ) else (
-    set output="captures\%timestamp%.csv"
+    set output="captures\%date_time%.csv"
 )
 
 
