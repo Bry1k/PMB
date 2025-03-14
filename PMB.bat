@@ -2,6 +2,7 @@
 cd /d "%~dp0"
 setlocal enabledelayedexpansion
 
+
 :: Set date and time for the output file name
 for /f "delims=" %%a in ('powershell -NoProfile -Command "Get-Date -Format yyyy-MM-dd_HH-mm"') do set date_time=%%a
 
@@ -23,17 +24,19 @@ cls
 
 :: Creates Capture folder if doesnt exist
 if not exist "Captures" (
-    mkdir "Captures" && set output="captures\%datetime%.csv"
+    mkdir "Captures" && set "output=Captures\%date_time%.csv"
 ) else (
-    set output="captures\%date_time%.csv"
+    set "output=Captures\%date_time%.csv"
 )
 
 
 ::Start capture
 echo Starting capture...
+powershell -c "[console]::beep(500, 350)"
 "bin\PresentMon.exe" -process_name "%filename%" -output_file %output% -delay %dtime% -timed %ctime% -terminate_after_timed
 
 cls
+powershell -c "[console]::beep(500, 350)"
 echo Capture finished.
 pause && exit /b
 
